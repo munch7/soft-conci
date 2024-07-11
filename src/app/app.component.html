@@ -1,11 +1,58 @@
 <div class="container" align="center">
-  <P style="text-align: center;">
-    Welcome to the world of concierge
-  </P>
+
+  <h1 style="color: rgb(255, 255, 255);">SOFT CONCI</h1>
+
   <div class="col-md-12">
+    <div class="col-md-4 col-sm-4 col-xs-4" style="background: orange; height: 4px;"></div>
+    <div class="col-md-4 col-sm-4 col-xs-4" style="background: rgb(255, 93, 34); height: 4px;"></div>
     <div class="col-md-4 col-sm-4 col-xs-4" style="background: red; height: 4px;"></div>
-    <div class="col-md-4 col-sm-4 col-xs-4" style="background: rgb(90, 43, 43); height: 4px;"></div>
-    <div class="col-md-4 col-sm-4 col-xs-4" style="background: rgb(0, 0, 0); height: 4px;"></div>
+  </div>  
+
+  <div class="col-md-12 col-sm-12 col-xs-12 bod">
+    <nav class="navbar">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Services</a>
+      <a routerLink="/about" routerLinkActive="active">About us</a>
+      <a routerLink="/contacts" routerLinkActive="active">Contacts</a>
+      <a routerLink="/faq" routerLinkActive="active">FAQ</a>
+    </nav>
+
+    <!-- <div class="col-md-12 col-sm-12 col-xs-12 bar navbar-fixed-top" 
+      ngxHideOnScroll [classNameWhenHidden]="'bar--hidden'">
+      <div class="col-md-12 col-sm-12 col-xs-12" fxShow="true" fxHide.lt-md="true" style="padding: 0px; margin: 0px">
+        <a routerLink="/home"><img src="../../../assets/pafro.png" style="width: 350px; float: left;"></a>
+        <nav class="navbar">
+            <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+            <a class="nav-link" routerLink="/whatwedo" routerLinkActive="active">What we do</a>
+            <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+            <a class="nav-link" routerLink="/contacts" routerLinkActive="active">Contacts</a>
+        </nav>
+      </div>
+      <div class="col-sm-10 col-sm-offset-1 col-xs-12" fxHide fxShow.lt-md style="padding: 0px;">
+          <mat-toolbar style="background: transparent;">
+            <mat-menu #menu="matMenu" fxShow="true" fxHide.lt-md="true">
+              <button mat-menu-item routerLink="/home">Home</button>
+              <button mat-menu-item routerLink="/about">About</button>
+              <button mat-menu-item routerLink="/whatwedo">What we do</button>
+              <button mat-menu-item routerLink="/products">Products</button>
+              <button mat-menu-item routerLink="/contacts">Contact us</button>
+            </mat-menu>
+            <button mat-button [matMenuTriggerFor]="menu" fxHide fxShow.lt-md>
+              <i class="fa fa-bars" 
+                style="border: 1px solid rgb(124, 46, 41);; padding: 10px; border-radius: 3px;">
+              </i>
+            </button>
+            <a routerLink="/home"><img src="../../../assets/pafro.png" style="width: 220px;"></a>
+          </mat-toolbar>
+      </div>
+    </div> -->
+    
   </div>
-  <h1>SOFT CONCI</h1>
+
+  <div class="col-md-12 col-sm-12 col-xs-12">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="col-md-12 col-sm-12 col-xs-12 foot"></div>
+
 </div>

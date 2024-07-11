@@ -1,0 +1,46 @@
+/* services.component.css */
+
+.services {
+    padding: 4rem 0;
+    background-color: rgb(224, 204, 238);
+    max-width: 1080px;
+    border-radius: 10px;
+  }
+  
+  .services .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .services .service-category {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .services .service-category h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .services .service-category ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+  
+  .services .service-category ul li {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
