@@ -1,0 +1,29 @@
+.admin {
+    padding: 4rem 0;
+    background-color: #f7f7f7;
+  }
+  
+  .admin .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .admin h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .admin table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .admin th, .admin td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  

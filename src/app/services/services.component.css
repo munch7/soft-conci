@@ -1,46 +1,58 @@
-/* services.component.css */
-
 .services {
-    padding: 4rem 0;
-    background-color: rgb(224, 204, 238);
-    max-width: 1080px;
-    border-radius: 10px;
-  }
-  
-  .services .container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  .services h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-  }
-  
-  .services .service-category {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .services .service-category h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  .services .service-category ul {
-    list-style-type: disc;
-    padding-left: 2rem;
-  }
-  
-  .services .service-category ul li {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.6;
-  }
-  
+  padding: 4rem 0;
+  background-color: rgba(247, 247, 247, 0.5); /* Adjusted RGBA for transparency */
+  border: 1px solid #ccc; /* Added a light border for contrast */
+  max-width: 1080px;
+  border-radius: 10px;
+  margin: 0 auto; /* Center the section horizontally */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+}
+
+.services .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.services .service-category {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
+}
+
+.services .service-category:hover {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
+  transform: translateY(-5px); /* Add a slight hover effect */
+}
+
+.services .service-category h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.services .service-category ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.services .service-category ul li {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+li{
+  list-style-type: none;
+}
+
+/* Add more specific styling as per your design requirements */

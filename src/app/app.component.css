@@ -1,25 +1,19 @@
 .container{
     margin: 0px;
-    padding-top: 80px;
+    padding-top: 30px;
     width: 100%;
     min-height: 957px;
     font-size: larger;
     color: rgb(0, 0, 0);
-    background-image: url("../assets/back.jpg");
-    background-repeat: repeat;
-    background-size: contain;
-    /* background-position: fixed; */
-    background-origin: content-box;
+    background-image: url("../assets/back1.jpg");
+    background-repeat: no-repeat;
 }
 a{
-    padding: 4px;
+    padding: 8px 20px 8px 20px;
     margin: 4px;
     color: black;
-    background: rgb(224, 204, 238);
-    border-radius: 30px;
-}
-a:active{
-    background: rgb(199, 150, 235);
+    background: rgb(247, 247, 247);
+    border-radius: 14px;
 }
 .bod, .navbar{
     padding: 0px;
@@ -29,37 +23,7 @@ a:active{
 .foot{
     height: 80px;
 }
-
-/* .bar{
-    background: rgb(36, 255, 24); 
-    color: rgb(117, 8, 1); 
-    padding: 10px;
-    width: 100%;
-    top: 0px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-a{
-    color: rgb(117, 8, 1); 
-    text-decoration: none;
-    cursor: default;
-}
-.bar .bar--hidden {
-  transform: translateY(-100%);
-}
-.nav-link{
-    font-size: x-large;
-    margin-right: 40px;
-}
-.navbar{
-    margin-top: 20px;
-    float: right;
-}
-h1{
-    float: left;    
-}
 button{
-    background: transparent;
-    border: none;
-    color: rgb(117, 8, 1);
-} */
+    border-radius: 6px;
+    border: 0px;
+}

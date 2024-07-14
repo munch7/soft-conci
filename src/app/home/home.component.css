@@ -3,7 +3,7 @@
     margin: 0 auto;
     text-align: center;
     padding: 4rem 1rem;
-    background-color: rgb(224, 204, 238);
+    background-color: rgb(247, 247, 247);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
@@ -30,9 +30,11 @@
     border-radius: 5px;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
+    border: 0px;
   }
   
   .container .btn:hover {
-    background-color: #e55e00; /* Darker shade of orange on hover */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */ 
+    transform: translateY(-5px); /* Add a slight hover effect */
   }
   

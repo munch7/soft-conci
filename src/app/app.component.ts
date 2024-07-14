@@ -3,24 +3,24 @@ import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
-// import * as AOS from 'aos';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
-    RouterOutlet, 
-    RouterLink, 
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
     RouterLinkActive,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FlexLayoutModule
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit{
-
+export class AppComponent implements OnInit {
   ngOnInit(): void {
     // AOS.init();
   }
