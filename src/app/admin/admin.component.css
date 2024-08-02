@@ -1,29 +1,29 @@
 .admin {
-    padding: 4rem 0;
-    background-color: #f7f7f7;
-  }
-  
-  .admin .container {
-    max-width: 1080px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .admin h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 2rem;
-  }
-  
-  .admin table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-  }
-  
-  .admin th, .admin td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.post-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-content {
+  text-align: left;
+}
+
+.post-content p {
+  margin: 0 0 10px;
+}
+
+.post-content strong {
+  color: #333;
+}

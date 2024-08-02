@@ -13,21 +13,32 @@
     <div class="contact-form">
       <p>Alternatively, you can fill out the form below:</p>
       <form [formGroup]="yourFormGroup" (ngSubmit)="onSubmit()">
-        <div class="form-group">
+        <div class="form-group" [ngClass]="{ 'has-error': yourFormGroup.get('name')?.invalid && (yourFormGroup.get('name')?.dirty || yourFormGroup.get('name')?.touched) }">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" formControlName="name" required>
+          <div *ngIf="yourFormGroup.get('name')?.invalid && (yourFormGroup.get('name')?.dirty || yourFormGroup.get('name')?.touched)" class="error-message">
+            Name is required.
+          </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" [ngClass]="{ 'has-error': yourFormGroup.get('email')?.invalid && (yourFormGroup.get('email')?.dirty || yourFormGroup.get('email')?.touched) }">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" formControlName="email" required>
+          <div *ngIf="yourFormGroup.get('email')?.invalid && (yourFormGroup.get('email')?.dirty || yourFormGroup.get('email')?.touched)" class="error-message">
+            Valid email is required.
+          </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" [ngClass]="{ 'has-error': yourFormGroup.get('message')?.invalid && (yourFormGroup.get('message')?.dirty || yourFormGroup.get('message')?.touched) }">
           <label for="message">Message:</label>
           <textarea id="message" name="message" formControlName="message" rows="4" required></textarea>
+          <div *ngIf="yourFormGroup.get('message')?.invalid && (yourFormGroup.get('message')?.dirty || yourFormGroup.get('message')?.touched)" class="error-message">
+            Message is required.
+          </div>
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary" [disabled]="isLoading">Send Message</button>
       </form>
+      <div *ngIf="isLoading" class="loading-indicator">Submitting...</div>
+      <div *ngIf="submissionSuccess === true" class="success-message">Your message has been sent successfully!</div>
+      <div *ngIf="submissionSuccess === false" class="error-message">There was an error sending your message. Please try again.</div>
     </div>
-
   </div>
 </section>
