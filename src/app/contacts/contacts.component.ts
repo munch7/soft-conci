@@ -1,18 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contacts',
   standalone: true,
   imports: [
-    CommonModule, // Import CommonModule for ngClass and other common directives
+    CommonModule,
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ReactiveFormsModule
   ],
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.css']
@@ -21,6 +20,7 @@ export class ContactsComponent implements OnInit {
   yourFormGroup: FormGroup;
   isLoading = false;
   submissionSuccess: boolean | null = null;
+  entries: { name: string, message: string }[] = [];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -33,7 +33,9 @@ export class ContactsComponent implements OnInit {
     });
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.fetchRandomEntries();
+  }
 
   onSubmit() {
     if (this.yourFormGroup.invalid) {
@@ -56,6 +58,7 @@ export class ContactsComponent implements OnInit {
           this.yourFormGroup.reset();
           this.isLoading = false;
           this.submissionSuccess = true;
+          this.fetchRandomEntries(); // Refresh the random entries after submission
         },
         (error) => {
           console.error('Error submitting form data:', error);
@@ -63,5 +66,25 @@ export class ContactsComponent implements OnInit {
           this.submissionSuccess = false;
         }
       );
+  }
+
+  fetchRandomEntries() {
+    const firebaseUrl = 'https://softconci-default-rtdb.europe-west1.firebasedatabase.app/form-data.json';
+
+    this.http.get<{ [key: string]: { name: string, message: string } }>(firebaseUrl)
+      .subscribe(
+        (response) => {
+          const entriesArray = Object.values(response);
+          this.entries = this.getRandomEntries(entriesArray, 3);
+        },
+        (error) => {
+          console.error('Error fetching entries:', error);
+        }
+      );
+  }
+
+  getRandomEntries(array: { name: string, message: string }[], count: number) {
+    const shuffled = array.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
   }
 }

@@ -4,9 +4,15 @@
 
     <div class="contact-info">
       <p>Soft Conci is here to assist you. Feel free to reach out to us via the following channels:</p>
+      <hr>
       <ul>
         <li>Email: francismburu75&#64;gmail.com</li>
-        <li>Phone: <a href="tel:+254-798-375-876"><i class="fa fa-phone"></i> +254-798-375-876</a></li>
+        <li><a href="tel:+254-798-375-876"><i class="fa fa-phone"></i> +254-798-375-876</a></li>
+        <li>
+          <a style="color: green;" aria-label="Chat on WhatsApp" href="https://wa.me/254798375876">
+            <i class="fa fa-whatsapp" style="color: green;"></i> Chat on WhatsApp
+          </a>
+        </li>
       </ul>
     </div>
 
@@ -39,6 +45,16 @@
       <div *ngIf="isLoading" class="loading-indicator">Submitting...</div>
       <div *ngIf="submissionSuccess === true" class="success-message">Your message has been sent successfully!</div>
       <div *ngIf="submissionSuccess === false" class="error-message">There was an error sending your message. Please try again.</div>
+    </div>
+
+    <div class="random-entries">
+      <h3>Messages</h3>
+      <ul>
+        <li *ngFor="let entry of entries">
+          <h4>{{ entry.name }}</h4>
+          <p>{{ entry.message }}</p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>

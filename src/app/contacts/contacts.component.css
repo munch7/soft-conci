@@ -91,3 +91,35 @@
 .contact .contact-form button:hover {
   background-color: #e55e00; /* Darker shade of orange on hover */
 }
+
+/* Styles for recent messages */
+.contact .random-entries {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.contact .random-entries h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact .random-entries ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact .random-entries ul li {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.contact .random-entries ul li strong {
+  color: #333;
+}
